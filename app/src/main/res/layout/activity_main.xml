@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".MainActivity">
+    <Button
+            android:text="Pick a color combination!"
+            android:layout_width="508dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/decideButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:background="@android:color/background_dark" android:textColor="@color/colorPrimary"
+            android:textSize="24sp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wubrgTxt"
+            android:textSize="24sp" android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="50dp" app:layout_constraintBottom_toTopOf="@+id/nicknameTxt"/>
+    <TextView
+            android:text="5 Color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nicknameTxt"
+            android:textSize="24sp" android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/bPic"/>
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp" app:srcCompat="@drawable/wmanasymbol"
+            android:id="@+id/wPic"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/uPic"
+            android:layout_marginBottom="200dp" app:layout_constraintBottom_toTopOf="@+id/decideButton"/>
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp" app:srcCompat="@drawable/umanasymbol"
+            android:id="@+id/uPic"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/wPic" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/bPic" app:layout_constraintTop_toTopOf="@+id/wPic"
+            app:layout_constraintBottom_toBottomOf="@+id/wPic"/>
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp" app:srcCompat="@drawable/bmanasymbol"
+            android:id="@+id/bPic"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/uPic" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/rPic" app:layout_constraintTop_toTopOf="@+id/uPic"
+            app:layout_constraintBottom_toBottomOf="@+id/uPic"/>
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp" app:srcCompat="@drawable/fmanasymbol"
+            android:id="@+id/gPic"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/rPic" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@+id/rPic"
+            app:layout_constraintBottom_toBottomOf="@+id/rPic"/>
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp" app:srcCompat="@drawable/rmanasymbol"
+            android:id="@+id/rPic"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/bPic" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/gPic" app:layout_constraintTop_toTopOf="@+id/bPic"
+            app:layout_constraintBottom_toBottomOf="@+id/bPic"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/nameText"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/wubrgTxt" android:hint="Name" android:textAlignment="center"
+            android:backgroundTint="@android:color/white"
+            android:textColorLink="@android:color/black"/>
+</android.support.constraint.ConstraintLayout>
